@@ -39,7 +39,7 @@ class KContribDB_DB extends Konsolidate
             $this->_default = $reference;
         }
 
-        if (array_key_exists('scheme', $parsedUri)) {
+        if (is_array($parsedUri) && array_key_exists('scheme', $parsedUri)) {
             $this->_pool[$reference] = $this->instance($parsedUri['scheme']);
 
             if (is_object($this->_pool[$reference])) {
@@ -160,7 +160,7 @@ class KContribDB_DB extends Konsolidate
                 array(
                     &$this->_pool[$reference], // the database object
                     $call // the method
-               ),
+                ),
                 $arguments
           );
         }

@@ -11,7 +11,7 @@ class KContribDB_DBMySQLi extends KContribDB_DB
 {
     /**
      * The error object (Exception which isn't thrown).
-     * @var KContribDBMySQLiException
+     * @var KContribDB_DBMySQLiException
      */
     public $error;
 
@@ -204,7 +204,7 @@ class KContribDB_DBMySQLi extends KContribDB_DB
     /**
      * Commit a transaction.
      * @var method
-     * @note    same as endTransaction( true );
+     * @note    same as endTransaction(true);
      */
     public function commitTransaction(): bool
     {
@@ -214,7 +214,7 @@ class KContribDB_DBMySQLi extends KContribDB_DB
     /**
      * Rollback a transaction.
      * @var method
-     * @note    same as endTransaction( false );
+     * @note    same as endTransaction(false);
      */
     public function rollbackTransaction(): bool
     {
