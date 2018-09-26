@@ -150,7 +150,7 @@ class KContribDB_DB extends Konsolidate
         $reference = array_shift($arguments);
 
         //  In case the first argument was not a pool item, put the first argument back in refer to the master
-        if (!array_key_exists($reference, $this->_pool)) {
+        if (!array_key_exists((string) $reference, $this->_pool)) {
             array_unshift($arguments, $reference);
             $reference = $this->_default;
         }

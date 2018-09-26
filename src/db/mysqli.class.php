@@ -161,9 +161,9 @@ class KContribDB_DBMySQLi extends KContribDB_DB
      * Quote and escape a string.
      * @var method
      */
-    public function quote(string $value): string
+    public function quote($value)
     {
-        return sprintf('\'%s\'', $this->escape($value));
+        return sprintf('\'%s\'', $this->escape((string) $value));
     }
 
     /**
