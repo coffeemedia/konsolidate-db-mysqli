@@ -147,7 +147,7 @@ class KContribDB_DB extends Konsolidate
     public function __call($call, $arguments)
     {
         //  Get the first argument, which could be a reference to a pool item
-        $reference = (string) array_shift($arguments);
+        $reference = array_shift($arguments);
 
         //  In case the first argument was not a pool item, put the first argument back in refer to the master
         if (!array_key_exists($reference, $this->_pool)) {
