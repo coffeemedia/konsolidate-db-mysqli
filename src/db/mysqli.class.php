@@ -74,6 +74,8 @@ class KContribDB_DBMySQLi extends KContribDB_DB
             }
         }
 
+        $this->connection->set_charset('utf8');
+
         return true;
     }
 
